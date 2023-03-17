@@ -473,7 +473,7 @@
     </main>
     <!-- Modal-->
 
-    <div class="backdrop " data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close type="button" class="modal-btn">
           <svg class="modal-btn-svg" width="8" height="8">
@@ -536,10 +536,12 @@
           </div>
 
           
-            <input class="form-input input-check" type="checkbox" name="policy" 
+            <input class="form-input input-check visually-hidden" 
+            type="checkbox" 
+            name="policy" 
             id="policy"/>
             <label for="policy" class="user-policy">
-              I accept the terms and conditions of the <a href="">Privacy Policy</a> 
+              &nbsp;I accept the terms and conditions of the &nbsp;<a href="" class="form-link"> Privacy Policy</a> 
             </label>
          
           <button type="submit" class="form-btn main-button">Send</button>
@@ -595,6 +597,20 @@
             </a>
           </li>
         </ul>
+      </div>
+
+      <div class="footer-form-wrapper">
+        <h2 class="footer-section-title footer-form-disc">Subscribe</h2>
+        <label for="mail" class="footer-modal-label">
+        <input class="footer-form-input" 
+        type="text" name="email" 
+        id="mail" placeholder="E-mail"
+        required />
+        <button class="footer-btn" type="submit">Subscribe
+          <svg class="footer-form-icon" width="24" height="24">
+            <use href="./images/symbol-defs.svg#icon-Email-frame1"></use>
+          </svg>
+        </button>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
