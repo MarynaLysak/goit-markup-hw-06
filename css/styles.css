@@ -927,7 +927,6 @@ background-color: var(--hover-color);
 /*Footer Email Form*/
 
 .footer-form-wrapper {
-  display: block;
   margin-left: 86px;
   margin-bottom: 16px;
 }
@@ -960,4 +959,8 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
 background-color: transparent;
+}
+
+.footer-form-wrapper, .footer-btn-wrapper {
+float: left;
 }
