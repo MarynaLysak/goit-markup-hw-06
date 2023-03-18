@@ -673,6 +673,7 @@ h2.section-title-apps .section-title {
 
   min-width: 408px;
   min-height: 576px;
+  
   padding: 24px;
   background-color: var(--main-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -697,7 +698,7 @@ h2.section-title-apps .section-title {
 
   background: var(--footer-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition-property: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
@@ -716,12 +717,13 @@ h2.section-title-apps .section-title {
   fill: currentColor;
   width: 8px;
   height: 8px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn-svg:hover,
-.modal-btn-svg:focus {
+.modal-btn svg:hover,
+.modal-btn svg:focus {
   fill: var(--main-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 /* Modal Form */
@@ -730,7 +732,8 @@ h2.section-title-apps .section-title {
 
 .modal-titel {
   text-align: center;
-  margin-top: 60px;
+  padding-top: 60px;
+  margin-bottom: 16px;
   color: var(--headings-color);
 }
 
@@ -757,10 +760,19 @@ h2.section-title-apps .section-title {
   margin: 0;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.form-input:focus,
+.form-input:hover {
+  border: 1px solid var(--link-color);
+border-radius: 4px;
+}
+
 .form-field {
   position: relative;
 }
+
 .modal-form-icon {
   position: absolute;
   top: 65%;
@@ -793,20 +805,33 @@ h2.section-title-apps .section-title {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.comment-form:hover,
+.comment-form:hover {
+  border: 1px solid var(--link-color);
+  border-radius: 4px;
+}
+
 .input-check {
   width: 16px;
   height: 16px;
 }
-.user-policy {
-  display: flex;
-  align-items: center;
 
-}
+.user-policy {
+  color: var(--border-color);
+ }
+
+ .form-text {
+  display: inline-block;
+  margin-left: 4px;
+  margin-top: 16px;
+ }
 
 .user-policy::before {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   content:'';
   width: 16px;
+  min-height: 16px;
   height: 16px;
   border: 1.25px solid var(--hero-background-color);
 border-radius: 2px;
@@ -818,6 +843,7 @@ color: var(--hover-color);
   background-image: url(./Vector1.svg);
 background-color: var(--hover-color);
 background-repeat: no-repeat;
+background-position: center;
 
 }
 
@@ -827,8 +853,8 @@ background-color: var(--hover-color);
 
 .form-link {
   color: var(--link-color);
-  text-decoration: none;
 }
+
 .form-btn {
   display: flex;
   flex-direction: row;
