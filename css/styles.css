@@ -726,9 +726,7 @@ h2.section-title-apps .section-title {
 
 /* Modal Form */
 
-form {
-  height: 336px;
-}
+
 
 .modal-titel {
   text-align: center;
@@ -792,7 +790,7 @@ form {
 
 .comment-form::placeholder {
   outline: none;
-  color: rgba(117, 117, 117, 0.5);;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .input-check {
@@ -927,22 +925,47 @@ background-color: var(--hover-color);
 /*Footer Email Form*/
 
 .footer-form-wrapper {
-  margin-left: 86px;
-  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+
 }
 
 .footer-form-disc {
+  font-family: inherit;
   font-weight: 500;
+  font-size: x-large;
   line-height: 1.5;
+  margin-bottom: 16px;
   color: var(--main-color);
 }
+
+
+.input-wrapper {
+  padding-left: 80px;
+}
+
 .footer-btn {
   display: flex;
-  min-width: 165px;
+  justify-content: center;
   align-items: center;
+  font-weight: 500;
+  line-height: 1.5;
+  
+  min-width: 165px;
   padding: 8px 24px;
+  gap: 16px;
+  margin-left: 16px;
+
+  border: none;
   background-color: var(--link-color);
   border-radius: 4px;
+  color: var(--main-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: var(--hover-color);
   color: var(--main-color);
 }
 
@@ -951,16 +974,17 @@ background-color: var(--hover-color);
 }
 
 .footer-form-input {
-display: flex;
-flex-direction: row;
-min-width: 264px;
-height: 40px;
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
 border: 1px solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
 background-color: transparent;
+color: var(--main-color);
 }
 
-.footer-form-wrapper, .footer-btn-wrapper {
-float: left;
+.footer-form-input::placeholder {
+  outline: none;
+
 }
